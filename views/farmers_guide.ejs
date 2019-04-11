@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title><%=title%> | </title>
+
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+
+      <link rel="stylesheet" href="/../css/style-mainmenu.css">
+      
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+  #main{
+ 
+  width: 100%;
+  height:100%;
+  background-color: pink;
+  border:2px;
+
+  }
+  
+  #left{
+
+ float:left; 
+  width: 50%;
+  background-color: powderblue;
+
+  }
+  #right{
+  float:right;
+  width: 50%;
+  }
+
+  #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+  </style>
+  
+</head>
+
+<body>
+
+  <div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+      
+        <% data1.forEach((sensor, index) => { %>
+          
+
+        <div class="user-info">
+          <span class="user-name">
+              <strong><%=sensor.username%></strong>
+          </span>
+          <span class="user-role"><%=sensor.country%></span>
+          
+          <%})%>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span> Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+         
+          <li>
+            <a href="/mytest">
+              <i class="fa fa-check"></i>
+              <span>My Tests</span>
+              
+            </a>
+          </li>
+          <li>
+              <a href="#">
+              <i class="fa fa-bullhorn"></i>
+              <span>Reminder</span>
+              <span class="badge badge-pill badge-danger">3</span>
+            </a>
+           
+          </li>
+          <li>
+            <a href="#">
+              <i class="far fa-user"></i>
+              <span>Expertise</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa  fa-eye"></i>
+              <span>Feeds</span>
+            </a>
+          
+          </li>
+          <li>
+            <a href="/allschemes">
+              <i class="fa fa-university"></i>
+              <span>Schemes</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Library</span>
+            </a>
+            
+
+
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Google maps</a>
+                </li>
+                <li>
+                  <a href="#">Open street map</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+         <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="/farmerguide">
+              <i class="fa fa-folder"></i>
+              <span>Farmers Guide</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="/login">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+        <div class="container-fluid">
+            
+          <h1>Soil Sampling</h1>
+          <h2>Materials required</h2>
+          <p>1. Spade or auger (screw or tube or post hole type)</br>
+          2. Khurpi</br>
+          3. Core sampler</br>
+          4. Sampling bags</br>
+          5. Plastic tray </p>
+              
+          <h2>Points to be considered</h2>
+          <p>
+          1. Collect the soil sample during fallow period.</br>
+          2. In the standing crop, collect samples between rows.</br>
+          3. Sampling at several locations in a zig-zag pattern ensures homogeneity.</br>
+          4. Fields, which are similar in appearance, production and past-management practices, can be grouped into a single sampling unit.</br>
+          5. Collect separate samples from fields that differ in colour, slope, drainage, past management practices like liming, gypsum application, fertilization, cropping system etc.</br>
+          6. Avoid sampling in dead furrows, wet spots, areas near main bund, trees, manure heaps and irrigation channels.</br>
+          7. For shallow rooted crops, collect samples up to 15 cm depth. For deep rooted crops, collect samples up to 30 cm depth. For tree crops, collect profile samples.</br>
+          8. Always collect the soil sample in presence of the farm owner who knows the farm better</p>
+          
+          <h2>Procedure<h2>
+          <h3>Guidelines for sampling depth</h3>
+          <table id="customers">
+            <tr>
+              <th>Sr. No.</th>
+              <th>Crop</th>
+              <th>Depth (In inches)</th>
+              <th>Depth (In cm)</th>
+          
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Grasses and grasslands</td>
+              <td>2</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Rice, finger millet, groundnut, pearl millet, small millets etc.(shallow rooted crops)</td>
+              <td>6</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Cotton, sugarcane, banana, tapioca, vegetables etc. (deep rooted crops)</td>
+              <td>9</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Perennial crops, plantations and orchard crops</td>
+              <td>Three soil samples at 12, 24 and  36 inches</td>
+              <td>Three soil samples at 30, 60 and 90 cm</td>
+            </tr>
+            
+          </table>
+        </br>
+          <p>
+          1. Divide the field into different homogenous units based on the visual observation and farmer’s experience.</br>
+          2. Remove the surface litter at the sampling spot.</br>
+          3. Drive the auger to a plough depth of 15 cm and draw the soil sample.</br>
+          4. Collect at least 10 to 15 samples from each sampling unit and place in a bucket or tray.</br>
+          5. If auger is not available, make a ‘V’ shaped cut to a depth of 15 cm in the sampling spot using spade.</br></br>
+          
+          <center>
+          <figure>
+            <img src="/../images/v.jpg" alt="v shape sampling">
+            <figcaption>1 inch / 2.5 cm &nbsp;&nbsp;&nbsp; 6 inches (15 cm)</figcaption>
+          </figure>
+          </center>
+          </br>
+          6. Remove thick slices of soil from top to bottom of exposed face of the ‘V’ shaped cut and place in a clean container.</br>
+          7. Mix the samples thoroughly and remove foreign materials like roots, stones, pebbles and gravels.</br>
+          8. Reduce the bulk to about half to one kilogram by quartering or compartmentalization.</br>
+          9. Quartering is done by dividing the thoroughly mixed sample into four equal parts. The two opposite quarters are discarded and the remaining two quarters are remixed and the process repeated until the desired sample size is obtained.</br>
+          10. Compartmentalization is done by uniformly spreading the soil over a clean hard surface and dividing into smaller compartments by drawing lines along and across the length and breadth. From each compartment a pinch of soil is collected. This process is repeated till the desired quantity of sample is obtained.</br>
+          11. Collect the sample in a clean cloth or polythene bag.</br>
+          </p>
+          
+          <table border="0" align="center" cellpadding="3" cellspacing="0">
+                    <tbody><tr>
+                      <td align="center" valign="middle"><span class="style34"><img src="/../images/agri_index_sample_clip_image004.jpg" alt="Soil_Sample_002" width="432" height="288" align="absmiddle" class="imgst"></span></td>
+                      <td align="center" valign="middle"><span class="style34"><img src="/../images/agri_index_sample_clip_image006.jpg" alt="Soil_Sample_003" width="432" height="288" class="imgst"></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top"><span class="style34"><strong>Selecting sampling  spot</strong></span></td>
+                      <td align="center" valign="top"><span class="style34"><strong>Remove  the surface litter at the sampling spot</strong></span></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle"><span class="style34"><em><img src="/../images/agri_index_sample_clip_image008.jpg" alt="Soil_Sample_004" width="432" height="288" class="imgst"></em></span></td>
+                      <td align="center" valign="middle"><span class="style34"><img src="/../images/agri_index_sample_clip_image010.jpg" alt="Soil_Sample_005" width="432" height="288" class="imgst"></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top"><p align="center" class="style34"><strong>Make  a ‘V’ shaped cut to a depth of 15 cm in the sampling spot</strong></p></td>
+                      <td align="center" valign="top"><span class="style47">‘V’  shaped cut</span></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image012.jpg" alt="Soil_Sample_006" width="288" height="432" class="imgst"></strong></span></td>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image014.jpg" alt="Soil_Sample_007" width="288" height="432" class="imgst"></strong></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top"><strong class="style47">Drive  the auger to a plough depth of 15 cm and draw the soil sample</strong></td>
+                      <td height="35" align="center" valign="top"><span class="style47">Collect soils using khupri</span></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image016.jpg" alt="Soil_Sample_008" width="432" height="288" class="imgst"></strong></span></td>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image018.jpg" alt="Soil_Sample_009" width="432" height="288" class="imgst"></strong></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top"><span class="style47">Mix  the samples thoroughly</span></td>
+                      <td height="35" align="center" valign="top"><span class="style47">Remove  foreign materials like roots, stones, pebbles and gravels</span></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image020.jpg" alt="Soil_Sample_010" width="432" height="288" class="imgst"></strong></span></td>
+                      <td align="center" valign="middle"><span class="style34"><strong><img src="/../images/agri_index_sample_clip_image022.jpg" alt="Soil_Sample_011" width="432" height="288" class="imgst"></strong></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top"><span class="style47">Quartering  is done by dividing the thoroughly mixed sample into four equal parts</span></td>
+                      <td height="35" align="center" valign="top"><span class="style47">Two  opposite quarters are discarded and the remaining is mixed</span></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle"><span class="style34"><img src="/../images/agri_index_sample_clip_image024.jpg" alt="Soil_Sample_012" width="432" height="288" class="imgst"></span></td>
+                      <td align="center" valign="middle"><span class="style34"><img src="/../images/agri_index_sample_clip_image026.jpg" alt="Soil_Sample_013" width="432" height="288" class="imgst"></span></td>
+                    </tr>
+                    <tr>
+                      <td height="35" align="center" valign="top">&nbsp;</td>
+                      <td height="35" align="center" valign="top"><span class="style47">Collect  the sample in a clean cloth or polythene bag</span></td>
+                    </tr>
+                    
+                  </tbody></table>
+                          
+        </div>
+          
+    
+      </main>
+      
+<!-- page-wrapper -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+
+  
+
+    <script  src="/../js/js-mainmenu.js"></script>
+
+
+
+
+   
+</body>
+
+</html>

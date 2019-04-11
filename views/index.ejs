@@ -1,0 +1,53 @@
+<% include partials/header.ejs %>
+    <div class="table-wrapper">
+            <table class="table table-hovered">
+                <tbody>
+				<th>Moisture Value</th>
+				<th>State</th>
+				<th>Day</th>
+				<th>Date</th>
+				<th>Time</th>
+                
+                    <% data.forEach((sensor, index) => { %>
+                        <tr>
+                        <td><%= sensor.data %></td>
+						<td>
+
+						<%if(sensor.data>900 && sensor.data<1015){%>
+								IN SOIL WITH NO WATER
+						<% } %>
+						
+						<%if(sensor.data>1015){%>
+								IN AIR
+						<% } %>
+
+						<%if(sensor.data>500 && sensor.data<800){%>
+								SOIL IS LESS MOIST
+						<% } %>
+						
+						<%if(sensor.data>300 && sensor.data<400){%>
+								DIPPED IN WATER
+						<% } %>
+						
+						<%if(sensor.data>200 && sensor.data<500){%>
+								
+						<% } %>
+						
+						<%if(sensor.data<250){%>
+								SOIL IS MORE MOIST
+						<% } %>
+
+						</td>
+						
+						<td><%= sensor.day1 %></td>
+						<td><%= sensor.date1 %></td>                        
+						<td><%= sensor.time1 %></td>
+						</tr>
+                    <% }) %>
+                </tbody>
+            </table>
+      
+    </div>
+</div>
+</body>
+</html>
